@@ -63,6 +63,7 @@ img {
     outline: none;
     cursor: pointer;
     border-radius: 8px;
+    padding: .8rem 1rem;
     box-shadow: 0 2px 4px var(--inputColor);
     color: var(--textColor);
 }
@@ -92,4 +93,9 @@ body {
     overflow: hidden;
     border-radius: 1rem;
     box-shadow: 2px 2px 8px var(--greyText);
+}
+
+/* Hide The Scroll thumb */
+::-webkit-scrollbar {
+    display: none;
 }
