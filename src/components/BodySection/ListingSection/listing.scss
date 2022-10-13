@@ -67,7 +67,7 @@
 
             img {
                 max-width: 100px;
-                height: 80%;
+                min-height: 100px;
                 object-fit: contain;
             }
 
@@ -84,6 +84,90 @@
                 padding: 1rem 0;
             }
 
+        }
+    }
+
+    .sellers {
+        width: 100%;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: flex-start;
+
+        .topSellers, .featuredSellers {
+            .heading {
+                padding: 1rem 0;
+            }
+            .btn {
+                padding: .5rem 1rem;
+            }
+        }
+
+        .card {
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            background: var(--whiteColor);
+            gap: 1rem;
+            box-shadow: 0 2px 4px var(--inputColor);
+
+            .users {
+                padding-right: 1rem;
+                border-right: 2px solid var(--greyText);
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 2px solid var(--inputColor);
+                    transition: .5s ease;
+
+                    &:hover {
+                        transform: translateY(-10px);
+                    }
+                }
+                .cardText {
+                    span {
+                        color: var(--blackClolor);
+                        font-weight: 500;
+
+                        small {
+                            margin-left: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// MEDIA QUERIRS ======================>
+
+@media screen and (max-width: 990px) {
+    .listingSection {
+        .sellers {
+            .card {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 918px) {
+    .listingSection {
+        .singleItem {
+            width: 200px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .listingSection {
+        .sellers {
+            flex-direction: column;
+            .card {
+                flex-direction: row;
+            } 
         }
     }
 }
